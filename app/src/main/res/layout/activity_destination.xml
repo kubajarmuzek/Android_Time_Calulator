@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DestinationActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="#00BCD4"
+        android:backgroundTint="#00BCD4"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:text="      KALKULATOR CZASU"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <NumberPicker
+        android:id="@+id/month2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/res"
+        app:layout_constraintEnd_toStartOf="@+id/year2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/day2"
+        app:layout_constraintTop_toBottomOf="@+id/buisness"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <NumberPicker
+        android:id="@+id/day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/month2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <NumberPicker
+        android:id="@+id/year2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/inc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/month2"
+        app:layout_constraintTop_toBottomOf="@+id/year1"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100px"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/robocze"
+        app:layout_constraintEnd_toStartOf="@+id/inc"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/month2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/inc"
+        android:layout_width="200px"
+        android:layout_height="120px"
+        android:backgroundTint="#009688"
+        android:text="+"
+        app:cornerRadius="0px"
+        app:layout_constraintBottom_toTopOf="@+id/robocze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/res"
+        app:layout_constraintTop_toBottomOf="@+id/year2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <NumberPicker
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/day2"
+        app:layout_constraintEnd_toStartOf="@+id/buisness"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="120px"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Dni pomiędzy datami"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/robocze"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/res"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <NumberPicker
+        android:id="@+id/buisness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/month2"
+        app:layout_constraintEnd_toStartOf="@+id/year1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/day1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <NumberPicker
+        android:id="@+id/year1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/year2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buisness"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/robocze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dni roboczych pomiędzy datami"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inc"
+        app:layout_constraintVertical_bias="0.5"
+        tools:layout_editor_absoluteX="183dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
