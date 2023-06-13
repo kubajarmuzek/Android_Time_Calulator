@@ -1,1 +1,10 @@
-# Android_Time_Calulator
+# Time Calculator for Android
+This project is an Android application designed to perform simple time calculations, including adding and subtracting days and values in the HH:MM:SS format. The application consists of three activities:
+
+Start activity: Allows the user to choose between date calculations or calculations on hours, minutes, and seconds (HMS).
+Date calculations activity: Performs calculations on dates. The user can set two dates using date pickers, and the number of days between those dates is displayed in a PlainText field. Additionally, the number of business days (excluding weekends and public holidays) is shown in a TextView. If the selected dates are the same, the result should be 0.
+HMS calculations activity: Performs calculations on hours, minutes, and seconds. The user can enter values for hours (H), minutes (M), and seconds (S) in the input fields. By pressing the "+" button, the values will be added; by pressing the "-" button, they will be subtracted. The result is displayed in the top row, and the input fields are cleared to "0" by pressing the "AC" button.
+## How to Calculate Business Days
+According to Polish law, business days are Monday to Friday, excluding public holidays. The following dates are considered public holidays: January 1st, January 6th, May 1st, May 3rd, August 15th, November 1st, November 11th, December 25th, December 26th, Easter Monday, and Corpus Christi. The last two holidays are movable holidays dependent on the Easter date, which falls on the first Sunday after the first spring full moon. Easter Monday is the day after Easter, and Corpus Christi is 60 days after Easter.
+
+Fortunately, there is a simple algorithm to determine the date of Easter known as the Meeus/Jones/Butcher method. You can find it at the following link: Wyznaczanie daty Wielkanocy - metoda Meeusa/Jonesa/Butchera. However, please note that exceptions can occur occasionally. In the 21st century, exceptions were observed on April 8th, 2005, and November 12th, 2018. You may take these exceptions into account in your calculations.
